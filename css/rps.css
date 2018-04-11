@@ -1,0 +1,222 @@
+#537791
+#C1C0B9
+#F7F6E7
+#E7E6E1
+font-family: 'Open Sans', sans-serif;
+font-family: 'Kanit', sans-serif;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #f8f7f0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: #f8f7f0;
+}
+
+header {
+  text-align: center;
+  align-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  border-radius: .25rem;
+  font-size: 4vw;
+  color: #537791;
+  font-family: 'Kanit', sans-serif;
+  letter-spacing: .15rem;
+ }
+
+ h1 {
+  margin: 0;
+}
+
+main {
+  margin-top: 1rem;
+  /* background: #537791; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+
+}
+
+#welcome {
+  z-index: 1;
+  position: absolute;
+  top: 17rem;
+  background-color: rgb(163, 162, 155);
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  height: 20rem;
+  width: 20rem;
+  border-radius: .25rem;
+  font-size: 1.25rem;
+  padding: 5rem;
+  border: 3px solid #53779175;
+
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+  animation-delay: .6s;
+  -webkit-animation-delay: .6s;
+
+}
+
+.welcome h2 {
+  font-weight: normal;
+  font-style: italic;
+}
+
+input {
+  align-self: center;
+  width: 75%;
+  padding: .25rem;
+  border-radius: .25rem;
+}
+
+input:focus {
+  outline-color: #537791;
+  outline-width: .5rem;
+}
+
+button {
+  width: 25%;
+  margin: .5rem auto;
+  border-radius: .25rem;
+  background-color: #f8f7f0;
+  transition: .25s;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+/* game info header */
+.gameInfo {
+  order: 1;
+  background-color: rgb(163, 162, 155);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-around;
+  text-align: center;
+  width: 80%;
+  border-radius: .25rem;
+  font-size: 2rem;
+  padding: 1rem;
+  color: #f8f7f0;
+  opacity: .5;
+  transition: .5s all;
+}
+
+.scores {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 6vw;
+  text-transform: uppercase;
+  /* font-family: kanit; */
+  font-weight: bold;
+  letter-spacing: .1rem;
+}
+
+#buttons{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+
+#buttons button{
+  margin: 1rem;;
+  font-size: 1.5rem;
+  width: 9rem;
+  color: rgb(53, 52, 48);
+}
+
+#results {
+  transition: .5s all;
+}
+
+/* rps images */
+.rps {
+  order: 3;
+  /* background-color: rgb(163, 162, 155); */
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: .1rem;
+  width: 80%;
+  border-radius: .25rem;
+  font-size: 2rem;
+  padding: 1rem;
+  opacity: .5;
+  transition: .5s all;
+}
+
+.rps img {
+  width: 30%;
+ padding: .5rem;
+ transition: .3s all;
+ /* animation-fill-mode: backwards; */
+}
+
+.rps img:hover{
+  transform: rotate(10deg);
+  cursor: pointer;
+}
+
+.directions {
+  display: flex;
+  order: 2;
+  justify-content: center;
+  text-align: center;
+  opacity: 1;
+  color: #537791;
+  font-size: 3vw;
+  opacity:.5;
+  transition: .25s all;
+}
+
+.winner {
+  order: 3;
+  /* background-color: rgb(163, 162, 155); */
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: .5rem;
+  width: 80%;
+  border-radius: .25rem;
+  font-size: 2rem;
+  padding: 1rem;
+  opacity: 1;
+  transition: .5s all;
+  color: #537791;
+  display: none;
+}
+
+.winner div {
+  width: 25%;
+}
+

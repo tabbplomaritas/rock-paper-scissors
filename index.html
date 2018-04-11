@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="css/rps.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Kanit:400,900|Open+Sans:300,300i,400" rel="stylesheet">
+
+  <title>Rock Paper Scissors</title>
+</head>
+<body>
+<header>
+  <h1>
+    <span>Rock</span>
+    <span>Paper</span>
+    <span>Scissors</span>
+  </h1>
+</header>
+
+<main class="">
+
+  <section id="welcome" class="animated bounceInDown">
+    <h2>Let's get ready to play!</h2>
+    <p>Enter your name:</p>
+    <input id="userName" type="text" placeholder="Brad Pitt">
+    <button id="submit">Submit</button>
+  </section>
+
+  <section class="gameInfo">
+    <div class="scores">
+      <p><span class="playerName"></span> :
+        <span class="playerScore"></span></p>
+      <p><span class="compName">Computer</span> : <span class="compScore"></span></p>
+    </div>
+    <div id="buttons">
+      <button id="reset">Reset</button>
+      <button id="play">Play</button>
+    </div>
+  </section>
+
+  <section class="directions">
+    <h2 id="results">Choose between Rock, Paper, Scissors!</h2>
+  </section>
+
+  <section class="rps">
+    <img id="rock" src="images/rock.svg" alt="graphic of gray rock" class="rock animated rotateIn">
+    <img id="paper" src="images/paper.svg" alt="graphic of gray rock" class="paper animated rotateIn">
+    <img id="scissors" src="images/scissors.svg" alt="graphic of gray rock" class="scissors animated rotateIn">
+  </section>
+
+  <section class="winner">
+      <div>
+        <p>You selected</p>
+        <img id="userPickItem" src="">
+      </div>
+      <div>
+          <p>Computer selected</p>
+          <img id="compPickItem" src="">
+      </div>
+    </section>
+
+
+
+
+</main>
+<!--
+<div class="credits">
+    <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+  <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+<div>Icons made by <a href="https://www.flaticon.com/authors/pixel-buddha" title="Pixel Buddha">Pixel Buddha</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
+</div>
+
+<script src="js/rps.js"></script>
+</body>
+</html>
