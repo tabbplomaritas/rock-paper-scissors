@@ -148,12 +148,14 @@ $(".rps").css("display", "none");
 $(".winner").css("display", "flex");
 $('.playerScore').text(playerScore);
 $('.compScore').text(compScore);
+$("#play").css("display", "block");
 }
 
 $('#play').click(function(){
 $(".winner").css("display", "none");
 setTimeout(function() {
   $(".rps").css("display", "flex");
+  $('img').addClass('animated rotateIn');
 }, 500);
 // setTimeout(function() {
   $('img').addClass('animated rotateIn');
@@ -161,13 +163,14 @@ setTimeout(function() {
 addHeaderZoomIn();
 $('#results').text("Choose between Rock, Paper, Scissors!");
 setTimeout(function() {
-  $('img').removeClass('animated rotateIn');
-}, 2000);
+$('img').removeClass('animated rotateIn');
+}, 1000);
 })
 
 $('#reset').click(function(){
   $(".winner").css("display", "none");
   setTimeout(function() {
+    $(".rps").addClass("animated rotateIn");
     $(".rps").css("display", "flex");
   }, 1000);
   playerScore = 0;
@@ -175,4 +178,5 @@ $('#reset').click(function(){
 $('.playerScore').text(playerScore);
 $('.compScore').text(compScore);
   $('#results').text("Choose between Rock, Paper, Scissors!");
+  $("#play").css("display", "none");
   });
