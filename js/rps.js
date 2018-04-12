@@ -17,6 +17,7 @@ function submitName(){
 //reduce the animation delay and animate out welcome box
   $('#welcome').css('animation-delay', '.1s');
   $('#welcome').addClass("animated bounceOutRight");
+  $("#swipe")[0].play();
   //bring bg elements to full opacity on delay
   setTimeout(function() {
     $('.gameInfo, .rps, .directions').css('opacity', '1');
@@ -48,6 +49,7 @@ function addHeaderZoomIn(){
 
 $("#rock").click(function(){
   userPick = rock;
+  $("#spin")[0].play();
   $(this).addClass("animated rotateIn");
   setTimeout(function() {
     $(this).removeClass('animated rotateIn');
@@ -68,6 +70,7 @@ addHeaderZoomout();
 
 $("#paper").click(function(){
   userPick = paper;
+  $("#spin")[0].play();
   $(this).addClass("animated rotateIn");
   setTimeout(function() {
     $(this).removeClass('animated rotateIn');
@@ -79,6 +82,7 @@ $("#paper").click(function(){
 
 $("#scissors").click(function(){
   userPick = scissors;
+  $("#spin")[0].play();
   $(this).addClass("animated rotateIn");
   setTimeout(function() {
     $(this).removeClass('animated rotateIn');
@@ -153,6 +157,7 @@ $("#play").css("display", "block");
 
 $('#play').click(function(){
 $(".winner").css("display", "none");
+$("#squeeze")[0].play();
 setTimeout(function() {
   $(".rps").css("display", "flex");
   $('img').addClass('animated rotateIn');
@@ -168,6 +173,7 @@ $('img').removeClass('animated rotateIn');
 })
 
 $('#reset').click(function(){
+  $("#swipe")[0].play();
   $(".winner").css("display", "none");
   setTimeout(function() {
     $(".rps").addClass("animated rotateIn");
