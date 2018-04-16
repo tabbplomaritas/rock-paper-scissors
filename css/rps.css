@@ -22,6 +22,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   color: #f8f7f0;
+  width: 100%;
 }
 
 header {
@@ -131,7 +132,7 @@ button:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  font-size: 6vw;
+  font-size: 4vw;
   text-transform: uppercase;
   /* font-family: kanit; */
   font-weight: bold;
@@ -224,3 +225,17 @@ button:hover {
   width: 25%;
 }
 
+@media screen and (min-width: 900px)
+ and (orientation: landscape) {
+  .scores{
+    font-size: 2.75rem;
+  }
+
+  .directions {
+    font-size: 2.75rem;
+  }
+
+
+
+
+}

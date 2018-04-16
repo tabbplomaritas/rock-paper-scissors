@@ -21,7 +21,7 @@ function submitName(){
   //bring bg elements to full opacity on delay
   setTimeout(function() {
     $('.gameInfo, .rps, .directions').css('opacity', '1');
-}, 1000);
+    }, 1000);
   $('img').removeClass("rotateIn");
 };
 
@@ -92,13 +92,7 @@ $("#scissors").click(function(){
   }, 1000);
 });
 
-
-
-function pickWinner(){
-
-  compPick = Math.floor((Math.random() * 3) + 1);
-  addHeaderZoomIn()
-  //set compPick image
+function setCompPickPic() {
   if (compPick == 1){
     $("#compPickItem").attr("src", "images/rock.svg");
   } else if (compPick == 2) {
@@ -106,7 +100,9 @@ function pickWinner(){
   } else {
     $("#compPickItem").attr("src", "images/scissors.svg");
   }
-  //set userPick image
+};
+
+function setUserPickPic() {
   if (userPick == rock){
     $("#userPickItem").attr("src", "images/rock.svg");
   } else if (userPick == paper) {
@@ -114,8 +110,9 @@ function pickWinner(){
   } else if (userPick == scissors){
     $("#userPickItem").attr("src", "images/scissors.svg");
   }
+};
 
-  // check winner
+function checkWinner(){
   if (userPick == rock){
     if (compPick == 1){
       $('#results').text("It's a tie, let's try again!");
@@ -147,12 +144,20 @@ function pickWinner(){
       } else {
         $('#results').text("It's a tie, let's try again!");
       }
-}
-$(".rps").css("display", "none");
-$(".winner").css("display", "flex");
-$('.playerScore').text(playerScore);
-$('.compScore').text(compScore);
-$("#play").css("display", "block");
+    }
+};
+
+function pickWinner(){
+  compPick = Math.floor((Math.random() * 3) + 1);
+  addHeaderZoomIn()
+  setCompPickPic();
+  setUserPickPic()
+  checkWinner();
+  $(".rps").css("display", "none");
+  $(".winner").css("display", "flex");
+  $('.playerScore').text(playerScore);
+  $('.compScore').text(compScore);
+  $("#play").css("display", "block");
 }
 
 $('#play').click(function(){
